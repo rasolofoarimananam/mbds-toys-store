@@ -33,6 +33,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">My Toys Store</h1>
         </header>
+        <h1>Liste des jouets</h1>
         <div >
           <JouetForm></JouetForm>
           <Jouet jouets={this.state.jouets}></Jouet>
