@@ -27,7 +27,7 @@ class JouetForm extends React.Component {
       <form>
         <input type="text" placeholder="Nom" ref="inputNom" required=""/>
         <input type="text" placeholder="Description" ref="inputDescription" required=""/>
-        <input type="text" placeholder="Prix" ref="inputPrix" required="" pattern="[0-9]+(\\.[0-9][0-9]?)?"/>
+        <input type="number" placeholder="Prix" ref="inputPrix" required="" pattern="[0-9]+(\\.[0-9][0-9]?)?"/>
         <button onClick={()=>this.addToy()}>Ajouter</button>
       </form>);
   }

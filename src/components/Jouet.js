@@ -31,8 +31,9 @@ class Jouet extends React.Component {
         <li key={key}>
          <h3>{currentGame.nom}</h3>
          <p>
+           <img className="toyImage"src={currentGame.image}/>
           Description : {currentGame.description}<br/>
-          Prix : {currentGame.prix}
+          Prix : {currentGame.prix} Rs
          </p>
          <button onClick={()=>this.removeToy(key)}><i className="fa fa-trash" aria-hidden="true"></i></button>
         </li>)
