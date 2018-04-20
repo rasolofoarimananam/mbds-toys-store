@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './Test.css';
 import base from './base';
 import Jouet from './components/Jouet';
 import JouetForm from './components/JouetForm';
@@ -18,6 +19,7 @@ class App extends Component {
       context: this,
       state: 'jouets'
     });
+    
   }
 
   // appele quand le composant disparait, par ex
@@ -29,14 +31,22 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">My Toys Store</h1>
+        <header>
+            <div className='wrapper'>
+              <h1>My Toys Store</h1>
+            </div>
         </header>
-        <h1>Liste des jouets</h1>
-        <div >
-          <JouetForm></JouetForm>
-          <Jouet jouets={this.state.jouets}></Jouet>
+        <div className='container'>
+          <section className='add-item'>
+            <JouetForm></JouetForm>
+          </section>
+          <section className='display-item'>
+            <div className='wrapper'>
+              <ul>
+                <Jouet jouets={this.state.jouets} app={this}></Jouet>
+              </ul>
+            </div>
+          </section>
         </div>
       </div>
     );
